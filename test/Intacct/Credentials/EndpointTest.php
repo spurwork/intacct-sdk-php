@@ -23,7 +23,24 @@ use Intacct\ClientConfig;
  */
 class EndpointTest extends \PHPUnit\Framework\TestCase
 {
-    public function testDefaultEndpoint(): void
+
+    /**
+     * Sets up the fixture, for example, opens a network connection.
+     * This method is called before a test is executed.
+     */
+    protected function setUp(): void
+    {
+    }
+
+    /**
+     * Tears down the fixture, for example, closes a network connection.
+     * This method is called after a test is executed.
+     */
+    protected function tearDown(): void
+    {
+    }
+    
+    public function testDefaultEndpoint()
     {
         $endpoint = new Endpoint(new ClientConfig());
         $this->assertEquals('https://api.intacct.com/ia/xml/xmlgw.phtml', $endpoint);
